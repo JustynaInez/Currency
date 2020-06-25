@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+
+
+<head>
+    <title> Kalkulator walut</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/table.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <script defer src="js/script.js"></script>
+</head>
+
+<body class="container">
+    <header class="header">
+        <h1> <a class = "header__link" href="#kursWalut">
+            Kalkulator walut
+            </a>
+        </h1>
+        <i class="fas fa-globe-europe fa-5x"></i>
+    </header>
+
+    <form class="form js-form">
+        <fieldset class="form__fieldset">
+            <legend class="form__legend">Kantor</legend>
+            <p>
+                <label>
+                    <span class="form__fieldText"> Wybierz walute</span>
+                    <select class="form__select js-currency1" name="currency">
+                        <option value="euro">EUR</option>
+                        <option value="usd">USD</option>
+                        <option value="gbd">GBD</option>
+                        <option value="pln" selected>PLN</option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <span class="form__fieldText">Kwota</span>
+                    <input class="form__input js-amount" type="number" name="amount" min="1" step="any" value=""
+                        required autofocus>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <span class="form__fieldText">Wymień na</span>
+                    <select class="form__select js-currency" name="currency">
+                        <option value="euro">EUR</option>
+                        <option value="usd">USD</option>
+                        <option value="gbd">GBD</option>
+                        <option value="pln">PLN</option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <span class="form__fieldText"> Tyle dostaniesz </span>
+                    <input class="js-result" name="result" value="0">
+                </label>
+            </p>
+
+        </fieldset>
+        <p>
+            <button class="form__button"> Przelicz</button>
+        </p>
+
+    </form>
+
+    <table class="table">
+        <caption class="table__caption" id="kursWalut"> Kurs walut na 17.06.2020</caption>
+        <tr class="table__row">
+            <th class="table__Cell table__Head" scope="col"></th>
+            <th class="table__Cell table__Head" scope="col"> EUR</th>
+            <th class="table__Cell table__Head" scope="col"> USD</th>
+            <th class="table__Cell table__Head" scope="col"> GBP</th>
+            <th class="table__Cell table__Head" scope="col"> PLN</th>
+
+        </tr>
+        <tr class="table__Row">
+            <th class="table__Cell table__Head" scope="row">PLN</th>
+            <td class="table__Cell table__CellBlack touch">4.44</td>
+            <td class="table__Cell  table__CellBlack  touch">3.91</td>
+            <td class="table__Cell  table__CellBlack touch">4.94</td>
+            <td class="table__Cell  table__CellBlack touch">1</td>
+        </tr>
+        <tr class="table__row">
+            <th class="table__Cell table__Head" scope="row">EUR</th>
+            <td class="table__Cell  table__CellBlack touch">1</td>
+            <td class="table__Cell  table__CellBlack touch">1.12</td>
+            <td class="table__Cell  table__CellBlack touch">0,90</td>
+            <td class="table__Cell  table__CellBlack touch">4,44</td>
+        </tr>
+        <tr class="table__row">
+            <th class="table__Cell table__Head" scope="row">USD </th>
+            <td class="table__Cell  table__CellBlack  touch">0,89</td>
+            <td class="table__Cell  table__CellBlack touch">1</td>
+            <td class="table__Cell  table__CellBlack touch">0,80 </td>
+            <td class="table__Cell  table__CellBlack touch">3,94</td>
+        </tr>
+        <tr class="table__row">
+            <th class="table__Cell table__Head" scope="row">GBP</th>
+            <td class="table__Cell  table__CellBlack touch">1,10</td>
+            <td class="table__Cell  table__CellBlack touch">1,23</td>
+            <td class="table__Cell  table__CellBlack touch">1</td>
+            <td class="table__Cell  table__CellBlack touch">4.91</td>
+        </tr>
+    </table>
+</body>

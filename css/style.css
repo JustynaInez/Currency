@@ -1,0 +1,42 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.container {
+    width: 100%;
+    margin: 100px auto;
+    background-color: #D2D6D9;
+}
+
+.header {
+    font-family: Lato, sans-serif;
+    color: whitesmoke;
+    text-align: center;
+    text-shadow: 1px 2px 5px black;
+    padding: 10px;
+    background-color: #4EA69D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 20px -15px 37px 0px rgb(0, 0, 0);
+}
+.header__link{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+i{
+    display: inline-block;
+    padding: 30px;
+}
+
+.js-result{
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 200px;
+    width: 100%;
+}

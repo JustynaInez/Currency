@@ -1,0 +1,46 @@
+.table {
+    color: rgb(243, 229, 229);
+    border-collapse: collapse;
+    box-shadow: 5px -5px 31px 0px rgb(0, 0, 0);
+    width: 70%;
+    margin: 0 auto;
+}
+
+.table__Cell {
+    border: 1px solid;
+    padding: 5px;
+    text-align: center;
+}
+
+.table__Head {
+    background-color: #4EA69D;
+    font-weight: 700;
+    text-shadow: 1px 2px 5px black;
+}
+
+.table__Row:nth-child(even) {
+    background-color: #D2D6D9
+}
+
+.touch {
+    color: rgb(243, 229, 229);
+}
+
+.touch:hover {
+    background-color: rgb(126, 131, 131);
+}
+
+.table__Head:hover {
+    background-color: rgb(19, 131, 28);
+}
+
+.table__caption {
+    color: rgb(217, 220, 223);
+    font-family: 'Pacifico', cursive;
+    font-size: 22px;
+    text-shadow: 1px 2px 5px rgb(0, 0, 0);
+}
+
+.table__CellBlack {
+    color: black;
+}

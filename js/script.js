@@ -28,17 +28,13 @@ switch (currency) {
 
 switch (currency1) {
     case "pln":
-        result = plnValue;
-        break;
+        return plnValue;
     case "usd":
-        result = plnValue / usdRate;
-        break;
+        return plnValue / usdRate;
     case "euro":
-        result = plnValue / euroRate;
-        break;
+        return plnValue / euroRate;
     case "gbd":
-        result = plnValue / gbdRate;
-        break;
+        return plnValue / gbdRate;
 }
 }
 formElement.addEventListener("submit", (event) => {
@@ -51,5 +47,5 @@ formElement.addEventListener("submit", (event) => {
     const plnValue = FinalResult (currency1, currency, amount);
 
    
-    resultElement.value = result.toFixed(2);
+    resultElement.value = plnValue.toFixed(2);
 });

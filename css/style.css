@@ -9,7 +9,8 @@ html {
 .container {
     width: 100%;
     margin: 100px auto;
-    background-color: #D2D6D9;
+    background-image: url("https://image.freepik.com/darmowe-wektory/biale-tlo-w-stylu-3d-papieru_23-2148403778.jpg");
+    background-size: cover;
 }
 
 .header {

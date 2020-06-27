@@ -24,19 +24,23 @@ let FinalResult = (currency, currency1, amount) => {
 
     switch (currency1) {
         case "pln":
-            return plnValue;
+            result = plnValue;
+            break;
         case "usd":
-            return plnValue * usdRate;
+            result = plnValue * usdRate;
+            break;
         case "euro":
-            return plnValue * euroRate;
+            result= plnValue * euroRate;
+            break;
         case "gbd":
-            return plnValue * gbdRate;
+            result= plnValue * gbdRate;
+            break;
     }
 }
 
 let resultInTheEnd = () => {
     const resultElement = document.querySelector(".js-result");
-    resultElement.value = plnValue.toFixed(2);
+    resultElement.value = result.toFixed(2);
 }
 
 let onForm = (event) => {
@@ -50,7 +54,7 @@ let onForm = (event) => {
     const currency = currencyElement.value;
     const currency1 = currencyElement1.value;
 
-    const plnValue = FinalResult(currency, currency1, amount);
+    const result = FinalResult(currency, currency1, amount);
 
     resultInTheEnd();
 };

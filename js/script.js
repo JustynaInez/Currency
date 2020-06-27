@@ -34,14 +34,10 @@ switch (currency1) {
 }
 }
 
-let init = () =>{
-
-const formElement = document.querySelector(".js-form")
-
-formElement.addEventListener("submit", (event) => {
+let onForm = (event) => {
     event.preventDefault()
-    const amountElement = document.querySelector(".js-amount");
-
+    
+const amountElement = document.querySelector(".js-amount");
 const resultElement = document.querySelector(".js-result");
 const currencyElement = document.querySelector(".js-currency");
 const currencyElement1 = document.querySelector(".js-currency1");
@@ -54,7 +50,13 @@ const currencyElement1 = document.querySelector(".js-currency1");
 
    
     resultElement.value = plnValue.toFixed(2);
-});
+};
+
+let init = () =>{
+
+const formElement = document.querySelector(".js-form")
+
+formElement.addEventListener("submit", onForm); 
 
 }
 

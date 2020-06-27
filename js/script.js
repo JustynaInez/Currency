@@ -22,6 +22,7 @@ let FinalResult = (currency, currency1, amount) => {
             break;
     }
 
+    
     switch (currency1) {
         case "pln":
             result = plnValue;

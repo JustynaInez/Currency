@@ -1,8 +1,9 @@
+{
 console.log("Cześć wszystkim! :)");
 
 
 
-let FinalResult = (currency, currency1, amount) => {
+const FinalResult = (currency, currency1, amount, plnValue) => {
     const euroRate = 4.44;
     const usdRate = 3.91;
     const gbdRate = 4.94;
@@ -21,30 +22,27 @@ let FinalResult = (currency, currency1, amount) => {
             plnValue = amount / gbdRate;
             break;
     }
-
     
     switch (currency1) {
         case "pln":
-            result = plnValue;
-            break;
+            return plnValue;
         case "usd":
-            result = plnValue * usdRate;
-            break;
+            return plnValue * usdRate;
         case "euro":
-            result= plnValue * euroRate;
-            break;
+            return plnValue * euroRate;
         case "gbd":
-            result= plnValue * gbdRate;
-            break;
+            return plnValue * gbdRate;
     }
+   
 }
 
-let resultInTheEnd = () => {
+const resultInTheEnd = (result) => {
+  
     const resultElement = document.querySelector(".js-result");
-    resultElement.value = result.toFixed(2);
+    resultElement.value = result.toFixed(2)
 }
 
-let onForm = (event) => {
+const onForm = (event) => {
     event.preventDefault()
 
     const amountElement = document.querySelector(".js-amount");
@@ -55,12 +53,12 @@ let onForm = (event) => {
     const currency = currencyElement.value;
     const currency1 = currencyElement1.value;
 
-    const result = FinalResult(currency, currency1, amount);
+    let result = FinalResult(currency, currency1, amount);
 
-    resultInTheEnd();
+    resultInTheEnd(result, currency, currency1, amount);
 };
 
-let init = () => {
+const init = () => {
 
     const formElement = document.querySelector(".js-form")
 
@@ -69,3 +67,4 @@ let init = () => {
 }
 
 init();
+}
